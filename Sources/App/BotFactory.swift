@@ -10,7 +10,8 @@ public final class BotFactory {
         return TgBotSDK.Bot(
             botAssembly: BotAssemblyImpl(app: app),
             token: Environment.get("BOT_TOKEN") ?? "",
-            apiEndpoint: "https://api.telegram.org/bot"
+            apiEndpoint: "https://api.telegram.org/bot",
+            unexpectedResult: nil
         )
     }
 }

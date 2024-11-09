@@ -31,19 +31,6 @@ public final class BotAssemblyImpl: BotAssembly {
             flowAssembly: FinishOperationFlowAssembly(app: app, aborting: true)
         ),
 
-//        CommandHandler(
-//            command: Command(value: "/insert"),
-//            description: "Insert value",
-//            flowAssembly: DatabaseInsertOperationFlowAssembly(app: app)
-//        ),
-
-//        CommandHandler(
-//            command: Command(value: "/select"),
-//            description: "Select values",
-//            flowAssembly: DatabaseSelectOperationFlowAssembly(app: app)
-//        ),
-        
-
     ]
 
     private let app: Application

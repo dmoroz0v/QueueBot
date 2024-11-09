@@ -1,11 +1,11 @@
 import Fluent
 
-struct CreateRow: AsyncMigration {
+struct CreateQueueData: AsyncMigration {
     func prepare(on database: Fluent.Database) async throws {
         do {
-            try await database.schema("rows")
+            try await database.schema(QueueData.schema)
                 .id()
-                .field("userId", .int64, .required)
+                .field("chatId", .int64, .required)
                 .field("value", .string, .required)
                 .create()
         } catch {
@@ -15,6 +15,6 @@ struct CreateRow: AsyncMigration {
     }
 
     func revert(on database: Fluent.Database) async throws {
-        try await database.schema("rows").delete()
+        try await database.schema(QueueData.schema).delete()
     }
 }

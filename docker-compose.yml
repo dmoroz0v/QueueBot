@@ -16,6 +16,7 @@ version: '3.7'
 
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
+  BOT_TOKEN: ${BOT_TOKEN}
   
 services:
   app:
